@@ -33,8 +33,17 @@ This will be akin to the Web API that you built in the last sprint, only this ti
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 1. Explain the difference between `Relational Databases` and `SQL`.
+
+- A relational database is a database is made up of tables with row and columns to store data in a tabular type format and data within each table can be related to data in another table by using foreign keys. sql is a query language that is used to interact with data stored in the database. Relational database formats and stores the data and sql interacts with it.
+
 1. Why do tables need a `primary key`?
+
+- Tables need a primary key because each entry into the table needs to have a unique identifer so that any entry can be specifically queried and it can be used to join to another table with related data with a foreign key
+
 1. What is the name given to a table column that references the primary key on another table.
+
+- Foreign key
+
 1. What do we need in order to have a _many to many_ relationship between two tables.
 
 ## Project Set Up
@@ -73,12 +82,12 @@ Feel free to name the tables and fields anything you want. **Add relationships**
 
 ### Tasks
 
-- [ ] Build the database and tables using knex migrations. **Seeding is not needed**.
-- [ ] Build the API with the following endpoints:
+- [x] Build the database and tables using knex migrations. **Seeding is not needed**.
+- [x] Build the API with the following endpoints:
 
-  - [ ] POST for adding projects.
-  - [ ] POST for adding actions.
-  - [ ] GET for retrieving a `project` by its `id` that returns an object with the following structure:
+  - [x] POST for adding projects.
+  - [x] POST for adding actions.
+  - [x] GET for retrieving a `project` by its `id` that returns an object with the following structure:
 
     ```js
     {

@@ -4,14 +4,14 @@ exports.up = function(knex) {
       tbl.increments();
 
       tbl
-        .string('project_name', 128)
+        .string('name', 128)
         .notNullable()
         .unique();
       tbl
         .string('description', 256)
         .notNullable()
         .unique();
-      tbl.boolean('complete').notNullable();
+      tbl.boolean('completed').notNullable();
     })
     .createTable('actions', tbl => {
       tbl.increments();
@@ -29,7 +29,6 @@ exports.up = function(knex) {
         .integer('project_id')
         .unsigned()
         .notNullable()
-        .unique()
         .references('id')
         .inTable('projects');
     });
