@@ -46,6 +46,8 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 1. What do we need in order to have a _many to many_ relationship between two tables.
 
+- A middle table that has multiple foreign keys.
+
 ## Project Set Up
 
 Follow these steps for starting your project.
