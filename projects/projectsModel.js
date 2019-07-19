@@ -36,6 +36,5 @@ function getProjectActions(id) {
       'actions.description',
       'actions.notes',
       'actions.completed',
-    )
-    .first();
+    );
 }

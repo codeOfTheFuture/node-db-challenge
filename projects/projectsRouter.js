@@ -38,7 +38,15 @@ router.get('/:id', async (req, res) => {
     const project = await Projects.getProjectById(id);
     const projectActions = await Projects.getProjectActions(id);
 
-    res.status(200).json({ ...project, actions: [projectActions] });
+    project.completed
+      ? (project.completed = true)
+      : (project.completed = false);
+
+    projectActions.forEach(action => {
+      action.completed ? (action.completed = true) : (action.completed = false);
+    });
+
+    res.status(200).json({ ...project, actions: projectActions });
   } catch (error) {
     console.log('Get project by id error: ', error);
     res.status(500).json({
